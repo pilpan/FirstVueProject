@@ -1,4 +1,4 @@
-<template lang="">
+<template>
 
   <form :style="{backgroundColor: 'Yellow', paddingLeft: '10px'}" @submit.prevent='subHandler'>
     <input type="text">
@@ -8,7 +8,6 @@
     <router-link :to="{name: 'MainPage'}">MainPage</router-link>
     <router-link :to="{name: 'FromPage'}">Form</router-link>
     <router-link :to="{name: 'CounterPage'}">Counter</router-link>
-
   </div>
   <router-view></router-view>
 </template>

@@ -1,27 +1,25 @@
 <template>
-    <div :style="addStyle">
-    <button @click='random(1,$event)'>-1</button>
+  <div :style="addStyle">
+    <button @click='random(1, $event)'>-1</button>
     <button @click='random(-1)'>+1</button>
-    <button
-    @click="isShow = !isShow"
-    >{{isShow?'Скрыть':'Показать'}}</button>
+    <button @click="isShow = !isShow">{{ isShow ? 'Скрыть' : 'Показать' }}</button>
     <p class="counterText" v-if='isShow'>Кнопка нажата {{ count }} раз</p>
   </div>
 </template>
 <script>
 export default {
-    data() {
+  data() {
     return {
       count: 0,
       isShow: false,
     }
   },
   methods: {
-    random(number,e = ''){
+    random(number, e = '') {
       console.log(e.target)
       this.count += -number;
     },
-    subHandler(){
+    subHandler() {
       console.log('Отправка данных')
     }
   },
@@ -31,7 +29,7 @@ export default {
         width: '300px',
         backgroundColor: 'black',
         display: 'inline-flex',
-        gap:'5px',
+        gap: '5px',
         justifyContent: "center",
       }
     }
@@ -39,7 +37,7 @@ export default {
 }
 </script>
 <style>
-  .counterText{
-    color: white;
-  }
+.counterText {
+  color: white;
+}
 </style>

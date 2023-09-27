@@ -9,7 +9,7 @@
 <script>
 export default {
     methods: {
-        call(event){
+        call(event) {
             console.log(event)
         }
     }
